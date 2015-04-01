@@ -5,5 +5,5 @@ This simple python script allows you to create an interactive 3D visualisation o
 
 It is aimed at medical physics students who work with DICOM for their research, and who are looking for an eye catching animation for a conference presentation, or are just interested in exploring their data in 3D. 
 
-For further details on usage, please refer to the <a href="2mrd.com.au/blog">2MRD blog</a>.
+For further details on usage, please refer to the <a href="https://2mrd.com.au/blog">2MRD blog</a>.
 
