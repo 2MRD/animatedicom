@@ -78,18 +78,4 @@ if args.animate is True:
         scene.scene.render()
         scene.scene.save_png(odir+"/anim"+np.str(i).zfill(2)+".png")
 
-    print("run the following commands at the command line to create an animated gif and mp4 movie")
-    print("cd ./animation/png/")
-    # This will convert all images to gifs, and will also force the canvas to
-    # desired size, mayavi was exporting cropped image.
-    print("mogrify -format gif  -resize "+np.str(finalwidth)+"x"+np.str(finalheight)+"^ -gravity center -extent "+np.str(finalwidth)+"x"+np.str(finalheight)+"^ *.png") 
-    print("cd ..")
-    print("mkdir gif")
-    print("cp png/*.gif ./gif/")
-    print("cd gif/")
-    # Create the gif animation using ImageMagick.
-    print("convert -delay 1 -loop 0 anim*.gif final.gif")
-    # Convert the animated gif to mp4 movie.
-    print("ffmpeg -i final.gif final.mp4")
-
 
