@@ -16,9 +16,22 @@ from matplotlib import pyplot, cm
 
 # Process command line arguments.
 parser = argparse.ArgumentParser()
-parser.add_argument("--dicomdir", type=str, default="./", help="The directory containing the dicom series (default:./)")
-parser.add_argument("--output", type=str, default="./animation/", help="The generated animation output directory (default:./animation/)")
-parser.add_argument("--animate", action="store_true", default=False, help="Animate camera rotation about the azimuthal axis and save images to output directory")
+
+parser.add_argument("--dicomdir",
+                    type=str,
+                    default="./",
+                    help="The directory containing the dicom series (default:./)")
+
+parser.add_argument("--output",
+                    type=str,
+                    default="./animation/",
+                    help="The generated animation output directory (default:./animation/)")
+
+parser.add_argument("--animate",
+                    action="store_true",
+                    default=False,
+                    help="Animate camera rotation about the azimuthal axis and save images to output directory")
+
 args = parser.parse_args()
 
 # VTK is used to read in the DICOM data series. By default will look in
@@ -51,7 +64,8 @@ finalheight = 360
 
 # Show the data using mlab from mayavi, and the matplotlib colourmap of choice.
 fig = mlab.figure(size=(finalwidth,finalheight), bgcolor=(1,1,1))
-mlab.contour3d(xv,yv,zv,ArrayDicom,contours=4, transparent=True, colormap="Oranges")
+mlab.contour3d(xv, yv, zv, ArrayDicom,
+               contours=4, transparent=True, colormap="Oranges")
 
 # If animate flag has been set; we create the output directory if it
 # doesn't already exist.
