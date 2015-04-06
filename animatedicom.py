@@ -3,13 +3,16 @@
 # Author: Iwan Cornelius <iwan@2mrd.com.au>
 # Date:   1 April 2015
 
-from mayavi import mlab
-import vtk
-from vtk.util import numpy_support
-import os
-import numpy as np
-from matplotlib import pyplot, cm
 import argparse
+import os
+
+import vtk
+import numpy as np
+
+from vtk.util import numpy_support
+from mayavi import mlab
+from matplotlib import pyplot, cm
+
 
 #process command line arguments
 parser = argparse.ArgumentParser()
