@@ -47,7 +47,7 @@ fig = mlab.figure(size=(640, 360), bgcolor=(1,1,1))
 
 # Show the data by adding it to the pipeline, and using a
 # matplotlib colour map name.
-mlab.pipeline.contour_surface(data,contours=4, colormap="Oranges", opacity=0.75)
+mlab.pipeline.contour_surface(data,contours=3, colormap="Oranges", opacity=0.75)
 
 # Perform our rotation animation. 
 if args.animate is True:
@@ -59,7 +59,8 @@ if args.animate is True:
     # Tweak these to values to set the starting angles of elevation and
     # azimuth. If you run interactively, you can type mlab.view(figure=fig) to get
     # current settings of the camera.
-    mlab.view(40, 70, focalpoint=(86, 110, 30), distance=200, figure=fig)
+    #mlab.view(40, 70, focalpoint=(86, 110, 30), distance=200, figure=fig)
+    mlab.view(0, 270, focalpoint=(100, 120, 70), distance=400, figure=fig)
 
     # Configure the number of frames we require.
     frames = 100

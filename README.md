@@ -23,11 +23,11 @@ The collection of frames can be rendered into a movie with the following steps:
     $> mogrify -format gif  -resize <width>x<height>^ -gravity center -extent <width>x<height>^ *.png 
     $> cd .. 
     $> mkdir gif
-    $> cp png/*.gif ./gif/"
+    $> cp png/*.gif ./gif/
     $> cd gif/
 
     # Create the gif animation using ImageMagick.                               
-    $> convert -delay 1 -loop 0 anim*.gif final.gif
+    $> convert -delay 1 -loop 0 frame*.gif final.gif
 
     # Convert the animated gif to mp4 movie.                                    
     $> ffmpeg -i final.gif final.mp4
