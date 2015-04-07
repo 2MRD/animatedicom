@@ -1,7 +1,7 @@
 # animatedicom - Visualise and Animate a DICOM data series
 #
-# Author: Iwan Cornelius <iwan@2mrd.com.au>
-# Date:   1 April 2015
+# Author: Iwan Cornelius <iwan@2mrd.com.au> and Christopher Poole <chris@2mrd.com.au>
+# Date:   7 April 2015
 
 
 import argparse
@@ -9,6 +9,8 @@ import os
 
 import vtk
 import tvtk
+
+import numpy as np
 
 from mayavi import mlab
 
@@ -47,7 +49,7 @@ fig = mlab.figure(size=(640, 360), bgcolor=(1,1,1))
 
 # Show the data by adding it to the pipeline, and using a
 # matplotlib colour map name.
-mlab.pipeline.contour_surface(data,contours=3, colormap="Oranges", opacity=0.75)
+contours = mlab.pipeline.contour_surface(data,contours=5, colormap="Oranges", opacity=1.0)
 
 # Perform our rotation animation. 
 if args.animate is True:
@@ -64,7 +66,7 @@ if args.animate is True:
 
     # Configure the number of frames we require.
     frames = 100
-    increment = 360.0 / frames
+    increment = 360.0 / np.float(frames)
 
     for i in range(frames):
         print("Rendering frame number: {0}".format(i))
