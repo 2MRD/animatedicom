@@ -5,6 +5,8 @@ This simple python script allows you to create an interactive 3D visualisation o
 
 It is aimed at medical physics students who work with DICOM for their research, and who are looking for an eye catching animation for a conference presentation, or are just interested in exploring their data in 3D. 
 
+Example animations can be found on the <a href="https://www.youtube.com/channel/UCu0ywtRvAAycRoO7lqiBskQ/feed">2MRD YouTube Channel</a>
+
 ### Usage
 Use `animatedicom.py` to produce a series of frames as `.png` images.
 
